@@ -4,7 +4,7 @@
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|user|string|null: false|
+|name|string|null: false|
 ### Association
 - has_many :groups, through: :groups_users
 - has_many :messages
@@ -13,10 +13,10 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|title|text|null: false|
+|title|text|
 |text|text|
-|user_id||string|null: false|
-|group_id||string|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 
 ### Association
