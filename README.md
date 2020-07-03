@@ -16,7 +16,7 @@
 |text|text|null: false|
 
 ### Association
-- belongs_to :user
+- belongs_to :users
 - belongs_to :groups
 
 ## groupsテーブル
