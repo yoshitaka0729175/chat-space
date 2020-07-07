@@ -2,9 +2,10 @@
   .Sidebar__top
     .Sidebar__top--user
       .Sidebar__top--user--left
-        yoshitaka
+      = current_user.name
       .Sidebar__top--user--right
         = icon('far', 'edit')
+      = link_to edit_user_path(current_user) do
         = icon('fa', 'cog') 
   .Sidebar__member
     .Sidebar__member--list
