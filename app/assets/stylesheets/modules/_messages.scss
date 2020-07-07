@@ -1,0 +1,150 @@
+.wrapper{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.Sidebar {
+  width: 300px;
+  height: 100vh;
+  &__top {
+    height: 100px;
+    background-color: #253141;
+    display: flex;
+    align-items: center;
+    &--user{
+      padding: 20px;
+      width: 260px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      &--left{
+        color: #ffffff;
+        font-size: 16px;
+      }
+      &--right{
+        color: #ffffff;
+        margin-left: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+  &__member {
+    background-color: #2f3e51;
+    padding-top:20px;
+    height: calc(100vh - 100px);
+    &--list{
+      padding: 0 20px 40px 20px;
+      color: #ffffff;
+      font-weight: bold;
+    }
+      .list1{
+        font-size: 15px;
+        padding-bottom: 5px;
+        cursor: pointer;
+      }
+      .list2{
+        font-size: 11px;
+        padding-bottom: 40px;
+      }
+  }
+}
+.Main {
+  width: calc(100vw - 300px);
+  &__top{
+    height: 100px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 40px;
+    .left1{
+      padding: 35px 0 15px 40px;
+      font-size: 20px;
+      color: #333333;
+    }
+    .left2{
+      padding-left: 40px;
+      font-size: 12px;
+      color: #999999;
+    }
+    .btn{
+      text-decoration: none;
+    }
+    .right1{
+      padding: 0 20px;
+      margin-top: 28px;
+      cursor: pointer;
+      border: 1px solid #38aef0;
+      color: #38aef0;
+      line-height: 40px;
+    }
+  }
+  &__chat{
+  height: calc( 100vh - 190px);
+  background-color: #fafafa;
+    &--list{
+      display: flex;
+      .chat-list1{
+        font-size: 16px;
+        color: #333333;
+        padding: 35px 0 12px 40px;
+      }
+      .chat-list2{
+        padding: 35px 0 12px 40px;
+        color: #999999;
+        font-size: 12px;
+      }
+    }
+    &--list--under{
+      .chat-list3{
+        font-size: 14px;
+        color: #434a54;
+        padding: 0 0 46px 40px;
+      }
+    }
+  }
+  
+  .footer{
+    height: 90px;
+    background-color: #d2d2d2;
+    padding: 20px 50px 0 40px;
+    .form{
+      display: flex;
+      justify-content: space-between;
+      &_contents{
+        height: 50px;
+        width: 100%;
+        display: flex;
+        position: relative;
+          .inputcontents{
+            height: 50px;
+            width: 100%;
+            padding-left: 15px;
+            border: none;
+          }
+          .form_icon{
+            font-size: 25px;
+            line-height: 50px;
+            position: absolute;
+            top: 3px;
+            right: 130px;
+          }
+          .file-image{
+            display: none;
+          }
+          
+          .btn{
+            height: 50px;
+            padding: 0 30px;
+            background-color: #38aef0;
+            color: #fff;
+            margin-left: 15px;
+            border: none;
+          }
+
+      }
+    }
+  }
+}
