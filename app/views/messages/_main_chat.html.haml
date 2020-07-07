@@ -1,0 +1,32 @@
+.Main
+  .Main__top
+    .main__top--left
+      .left1
+        test
+      .left2
+        member:masa
+    .main__top--right
+    = link_to "#", class:"btn" do
+      .right1
+        edit
+  .Main__chat
+    .Main__chat--list
+      .chat-list1 masa
+      .chat-list2 2019/11/20(Wed) 17:43:01
+    .Main__chat--list--under
+      .chat-list3 おはよう！
+    .Main__chat--list
+      .chat-list1 masa
+      .chat-list2 2019/11/20(Wed) 17:43:34
+    .Main__chat--list--under
+      .chat-list3 今日は夜から雨
+  .footer
+    .form
+      .form_contents
+        %input{type: "text", placeholder: "type a message", class: "inputcontents"}
+        %label{class: "input-box__image"}
+          = icon('far', 'image', class: "form_icon")
+          %input{type: "file", class: "file-image"}
+        .form_submit
+          %input{type: "submit", value: "Send", class: "btn"}
+
