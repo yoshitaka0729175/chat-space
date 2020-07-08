@@ -19,14 +19,19 @@
       justify-content: space-between;
       align-items: center;
       font-weight: bold;
-      &--left{
+      &--left {
         color: #ffffff;
         font-size: 16px;
       }
-      &--right{
-        color: #ffffff;
-        margin-left: 5px;
+      &--right {
         cursor: pointer;
+          .edit{
+          color: #ffffff;
+          margin-right: 5px;
+          }
+          .cog{
+            color: #fff;
+          }
       }
     }
   }
@@ -43,10 +48,12 @@
         font-size: 15px;
         padding-bottom: 5px;
         cursor: pointer;
+        color: #fff;
       }
       .list2{
         font-size: 11px;
         padding-bottom: 40px;
+        color: #fff;
       }
   }
 }
