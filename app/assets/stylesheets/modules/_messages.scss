@@ -1,3 +1,7 @@
+*  {
+  box-sizing: border-box;
+}
+
 .wrapper{
   height: 100vh;
   width: 100vw;
@@ -39,6 +43,7 @@
     background-color: #2f3e51;
     padding-top:20px;
     height: calc(100vh - 100px);
+    overflow: scroll;
     &--list{
       padding: 0 20px 40px 20px;
       color: #ffffff;
@@ -76,43 +81,46 @@
       font-size: 12px;
       color: #999999;
     }
-    .btn{
-      text-decoration: none;
-    }
-    .right1{
+    .btn a{
+      display: block;
       padding: 0 20px;
       margin-top: 28px;
       cursor: pointer;
       border: 1px solid #38aef0;
       color: #38aef0;
       line-height: 40px;
+      text-decoration: none;
     }
   }
-  &__chat{
-  height: calc( 100vh - 190px);
-  background-color: #fafafa;
-    &--list{
-      display: flex;
-      .chat-list1{
-        font-size: 16px;
-        color: #333333;
-        padding: 35px 0 12px 40px;
+  .Messagelist{
+    height: calc( 100vh - 190px);
+    background-color: #fafafa;
+    padding: 35px 0 0 40px ;
+    overflow: scroll;
+    .MessageBox{
+      margin-bottom: 46px;
+      .MessageInfo{
+        display: flex;
+        font-weight: bold;
+        &__userName{
+          font-size: 16px;
+          color: #333333;
+        }
+        &__date{
+          color: #999999;
+          font-size: 12px;
+        }
       }
-      .chat-list2{
-        padding: 35px 0 12px 40px;
-        color: #999999;
-        font-size: 12px;
-      }
-    }
-    &--list--under{
-      .chat-list3{
+      .Message{
         font-size: 14px;
         color: #434a54;
-        padding: 0 0 46px 40px;
+        font-weight: bold;
+        margin-top: 12px;
       }
+        
+      
     }
   }
-  
   .footer{
     height: 90px;
     background-color: #d2d2d2;
@@ -135,23 +143,26 @@
             font-size: 25px;
             line-height: 50px;
             position: absolute;
-            top: 3px;
-            right: 130px;
+            right: 10px;
           }
           .file-image{
             display: none;
           }
-          
-          .btn{
-            height: 50px;
-            padding: 0 30px;
-            background-color: #38aef0;
-            color: #fff;
-            margin-left: 15px;
-            border: none;
-          }
-
       }
     }
+      .form_submit{
+        .btn{
+          height: 50px;
+          padding: 0 30px;
+          background-color: #38aef0;
+          color: #fff;
+          margin-left: 15px;
+            border: none;
+            }
+      }
   }
+
+      
+    
+  
 }

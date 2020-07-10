@@ -1,33 +1,23 @@
 .Main
   .Main__top
-    .main__top--left
-      .left1
-        test
-      .left2
-        Member:masa
-    .main__top--right
-    = link_to "#", class:"btn" do
-      .right1
+    .left1
+      = @group.name
+    .left2
+      Member:
+      - @group.users.each do |user|
+        = user.name
+    .btn
+      = link_to edit_group_path(@group.id) do 
         edit
-  .Main__chat
-    .Main__chat--list
-      .chat-list1 masa
-      .chat-list2 2019/11/20(Wed) 17:43:01
-    .Main__chat--list--under
-      .chat-list3 おはよう！
-    .Main__chat--list
-      .chat-list1 masa
-      .chat-list2 2019/11/20(Wed) 17:43:34
-    .Main__chat--list--under
-      .chat-list3 今日は夜から雨
+  .Messagelist
+    =render @messages
   .footer
-    .form
-      .form_contents
-        %input{type: "text", placeholder: "type a message", class: "inputcontents"}
-        %label{class: "input-box__image"}
-          = icon('far', 'image', class: "form_icon")
-          %input{type: "file", class: "file-image"}
+    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
+      .form
+        .form_contents
+          = f.text_field :content, class: 'inputcontents', placeholder: 'type a message'
+          = f.label :image, class: 'input-box__image' do
+            = icon('far', 'image', class: "form_icon")
+            = f.file_field :image, class: 'file-image'
         .form_submit
-          %input{type: "submit", value: "Send", class: "btn"}
-
-
+          = f.submit 'Send', class: 'btn'
