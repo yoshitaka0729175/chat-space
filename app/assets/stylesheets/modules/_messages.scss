@@ -71,15 +71,19 @@
     display: flex;
     justify-content: space-between;
     padding-right: 40px;
-    .left1{
-      padding: 35px 0 15px 40px;
-      font-size: 20px;
-      color: #333333;
-    }
-    .left2{
-      padding-left: 40px;
-      font-size: 12px;
-      color: #999999;
+    &__left{
+      display: flex;
+      flex-direction: column;;
+      .left1{
+        padding: 35px 0 15px 40px;
+        font-size: 20px;
+        color: #333333;
+      }
+      .left2{
+        padding-left: 40px;
+        font-size: 12px;
+        color: #999999;
+      }
     }
     .btn a{
       display: block;
@@ -109,6 +113,7 @@
         &__date{
           color: #999999;
           font-size: 12px;
+          padding-left: 10px;;
         }
       }
       .Message{
