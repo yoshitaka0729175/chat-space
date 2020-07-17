@@ -7,15 +7,12 @@
         = link_to new_group_path do
           = icon('fas', 'edit', class: "edit")
         = link_to edit_user_path(current_user) do
-          = icon('fa', 'cog', class: "cog") 
+          = icon('fa', 'cog', class: "cog")
   .Sidebar__member
     - current_user.groups.each do |group|
       .Sidebar__member--list
-        = link_to group_messages_path(group) do 
+        = link_to group_messages_path(group) do
           .list1
             = group.name
-          .list2 
+          .list2
             = group.show_last_message
-    
-
-   
